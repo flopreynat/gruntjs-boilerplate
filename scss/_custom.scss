@@ -1,0 +1,26 @@
+$maincolor: green;
+
+h1 {
+	color: $maincolor;
+}
+body {
+	background:url('images/logo.png') no-repeat;
+}
+header {
+	background: black;
+	padding: 30px;
+	text-align: center;
+	img {
+		width: 150px;
+		border-radius: 500px;
+	}
+}
+@media all and (max-width: 35em) {
+	.col-group {
+		text-align: center;
+	}
+}
+.twitter {
+	text-align: center;
+	padding-top: 30px;
+}
