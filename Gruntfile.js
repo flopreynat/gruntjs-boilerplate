@@ -31,6 +31,9 @@ module.exports = function(grunt) {
 
     imagemin: {
       dist: {
+        options: {
+          cache: false
+        },
         files: [{
           expand: true,
           cwd: 'images',
