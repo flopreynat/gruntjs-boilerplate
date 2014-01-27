@@ -22,5 +22,13 @@ header {
 }
 .twitter {
 	text-align: center;
+	margin: 0 auto;
 	padding-top: 30px;
+	max-width: 150px;
+	box-shadow: 10px 10px 5px #888;
+}
+
+a {
+  width: calc(50% - 2em);
+  transition: transform 1s;
 }

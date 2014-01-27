@@ -29,6 +29,14 @@ module.exports = function(grunt) {
       }
     },
 
+    autoprefixer: {
+      dist: {
+        files: {
+          'build/css/global.min.auto.css': 'build/css/global.min.css'
+        }
+      }
+    },
+
     imagemin: {
       dist: {
         options: {
@@ -73,7 +81,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: '**/*.scss',
-        tasks: ['sass'],
+        tasks: ['sass','autoprefixer'],
         options: {
           spawn: false,
           livereload: true
@@ -92,12 +100,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-includes');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint','uglify','sass','imagemin','includes','copy']);
+  grunt.registerTask('default', ['jshint','uglify','sass','autoprefixer','imagemin','includes','copy']);
 
 };
